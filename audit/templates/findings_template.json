@@ -1,0 +1,66 @@
+{
+  "_comment_overview": "Edit this file with audit findings then run: python3 ../scripts/generate_audit_report.py findings.json",
+
+  "_enum_severity": ["CRITICAL", "HIGH", "MEDIUM", "LOW"],
+  "_enum_priority": ["P0", "P1", "P2", "P3"],
+  "_enum_category": [
+    "Security",
+    "Production",
+    "Container",
+    "CI/CD",
+    "Code Quality",
+    "Observability",
+    "Azure",
+    "Additional",
+    "SOC2"
+  ],
+  "_enum_soc2_tsc_prefix": [
+    "CC6 — Logical & Physical Access  (use IDs SOC2-CC6.x)",
+    "CC7 — System Operations          (use IDs SOC2-CC7.x)",
+    "CC8 — Change Management          (use IDs SOC2-CC8.x)",
+    "CC9 — Risk Mitigation            (use IDs SOC2-CC9.x)",
+    "A1  — Availability               (use IDs SOC2-A1.x)",
+    "PI1 — Processing Integrity       (use IDs SOC2-PI1.x)",
+    "C1  — Confidentiality            (use IDs SOC2-C1.x)",
+    "P1  — Privacy                    (use IDs SOC2-P1.x)"
+  ],
+
+  "metadata": {
+    "repo_name": "REPLACE-WITH-REPO-NAME",
+    "audit_date": "YYYY-MM-DD",
+    "auditor": "Claude Opus 4.7"
+  },
+
+  "findings": [
+    {
+      "id": "S1",
+      "category": "Security",
+      "severity": "CRITICAL",
+      "priority": "P0",
+      "title": "One-line actionable title",
+      "files": "path/to/file.py:LINE_OR_RANGE, other/path.py:42",
+      "description": "What the issue is, why it matters, and how an attacker or operator would encounter it. 2–4 sentences. Include impact.",
+      "fix": "Concrete remediation steps. Reference specific code changes, env vars, or config. One paragraph max."
+    },
+    {
+      "id": "P1",
+      "category": "Production",
+      "severity": "HIGH",
+      "priority": "P1",
+      "title": "Example production finding",
+      "files": "app/main.py:128",
+      "description": "Describe the production-readiness issue (sync call in async path, missing retry, etc.).",
+      "fix": "Wrap in run_in_executor / add tenacity retries / pin dependency / etc."
+    },
+    {
+      "id": "SOC2-CC6.1",
+      "category": "SOC2",
+      "severity": "HIGH",
+      "priority": "P1",
+      "title": "Example SOC2 finding — control criterion in title is helpful",
+      "files": "(none) or path/to/file",
+      "description": "Map the gap to the specific TSC. Note: SOC2 findings often overlap with Security/Production findings — that is intended. The SOC2 sheet frames them through the audit lens.",
+      "fix": "Compliance-appropriate remediation (policy + code + control)."
+    }
+  ]
+}
