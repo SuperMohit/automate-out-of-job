@@ -1,1 +1,2 @@
-# automate-out-of-job
+# Automate-out-of-job
+Contains Skills WIP.
